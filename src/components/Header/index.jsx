@@ -1,8 +1,12 @@
 import { Search, Conteiner, Profile } from './styles';
 
+import { useAuth } from '../../hooks/auth';
+
 import { Input } from '../../components/Input';
+import { ButtonText } from "../../components/ButtonText";
 
 export function Header() {
+    const { signOut } = useAuth();
 
     return(
         <Conteiner>
@@ -13,10 +17,15 @@ export function Header() {
 
             </Search>
 
+            
+
             <Profile to="/profile">
                 <div>
                     <strong>Ivan Barbosa</strong>
-                    <a href='/'>Sair</a>
+                    <ButtonText 
+                        title="Voltar" 
+                        onClick={signOut}
+                    />
                 </div>
 
                 <img 

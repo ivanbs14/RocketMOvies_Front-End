@@ -16,8 +16,8 @@ function AuthProvider({ children }){
             api.defaults.headers.authorization = `Bearer ${token}`;
             setData({ user,token })
 
-            localStorage.setItem("@notemovie: user", JSON.stringify(user));
-            localStorage.setItem("@notemovie: token", token);
+            localStorage.setItem("@notemovie:user", JSON.stringify(user));
+            localStorage.setItem("@notemovie:token", token);
 
         } catch(error) {
             if(error.response) {
@@ -28,9 +28,16 @@ function AuthProvider({ children }){
         }
     }
 
+    function signOut() {
+        const token = localStorage.removeItem("@notemovie:token");
+        const user = localStorage.removeItem("@notemovie:user");
+
+        setData({})
+    } 
+
     useEffect(() => {
-        const token = localStorage.getItem("@notemovie: token");
-        const user = localStorage.getItem("@notemovie: user");
+        const token = localStorage.getItem("@notemovie:token");
+        const user = localStorage.getItem("@notemovie:user");
 
         if (token && user) {
             api.defaults.headers.authorization = `Bearer ${token}`;
@@ -43,7 +50,11 @@ function AuthProvider({ children }){
     }, []);
 
     return (
-        <AuthContext.Provider value={{ signIn, user: data.user }}>
+        <AuthContext.Provider value={{ 
+                signIn, 
+                signOut,
+                user: data.user 
+            }}>
             { children }
         </AuthContext.Provider>
     )
