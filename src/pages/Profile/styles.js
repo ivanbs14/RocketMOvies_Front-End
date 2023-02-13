@@ -24,14 +24,23 @@ export const Conteiner = styled.div`
             color: ${({theme}) => theme.COLORS.BACKGROUNDP_500};
         }
     }
+
 `;
 
 export const Form = styled.form`
     max-width: 340px;
     margin: 30px auto 0;
 
+    > div:nth-child(2){
+        margin-top: 60px;
+    }
+
     > div:nth-child(4){
-        margin-top: 24px;
+        margin-top: 16px;
+    }
+
+    > div {
+        margin-bottom: 8px;
     }
 `;
 

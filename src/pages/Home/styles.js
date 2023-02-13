@@ -11,8 +11,6 @@ export const Conteiner = styled.div`
     "header"
     "content";
 
-    background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
-
     > Header {
         padding: 0 125px;
     }

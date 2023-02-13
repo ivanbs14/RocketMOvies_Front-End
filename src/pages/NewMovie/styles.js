@@ -4,8 +4,6 @@ export const Conteiner = styled.div`
     width: 100%;
     height: 100vh;
 
-    background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
-
     display: grid;
     grid-template-rows: 105px auto;
     grid-template-areas: 

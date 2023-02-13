@@ -7,9 +7,6 @@ export const Conteiner = styled.div`
 
     display: flex;
     align-items: stretch;
-
-    background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
-    
 `;
 
 export const Form = styled.form`
