@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const Conteiner = styled.header`
     grid-area: header;
@@ -24,6 +25,12 @@ export const Conteiner = styled.header`
         color: ${({theme}) => theme.COLORS.BACKGROUNDP_400};
     }
 
+    > Button {
+        position: absolute;
+        margin-left: 1340px;
+        margin-top: 70px;
+    }
+
 `;
 
 export const Search = styled.div`
@@ -32,7 +39,7 @@ export const Search = styled.div`
     margin: auto;
 `;
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
     display: flex;
     align-items: center;
 

@@ -13,7 +13,8 @@ function AuthProvider({ children }){
             const response = await api.post("/sessions", { email, password });
             const { user, token } = response.data;
 
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
             setData({ user,token })
 
             localStorage.setItem("@notemovie:user", JSON.stringify(user));
@@ -40,7 +41,7 @@ function AuthProvider({ children }){
         const user = localStorage.getItem("@notemovie:user");
 
         if (token && user) {
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             
             setData({
                 token,
