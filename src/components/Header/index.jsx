@@ -1,11 +1,16 @@
 import { Search, Conteiner, Profile } from './styles';
 import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api';
+
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
 import { Input } from '../../components/Input';
 import { ButtonText } from '../../components/ButtonText';
 
 export function Header() {
-    const { signOut } = useAuth();
+    const { signOut, user } = useAuth();
+
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
     function handleProfile() {
         return signOut
@@ -22,11 +27,11 @@ export function Header() {
 
             <Profile to="/profile">
                 <div>
-                    <strong>Ivan Barbosa</strong>
+                    <strong>{user.name}</strong>
                 </div>
 
                 <img 
-                    src="https://github.com/ivanbs14.png" 
+                    src={avatarUrl}
                     alt="imagem do usuário" 
                 />
             </Profile>
