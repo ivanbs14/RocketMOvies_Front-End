@@ -34,6 +34,15 @@ export function PreviewMovie() {
     navigate(-1)
   }
 
+  async function handleRemoveMovie() {
+    const confirm = window.confirm("Deseja remover o filme?");
+
+    if (confirm) {
+      await api.delete(`/notes/${params.id}`);
+      navigate(-1);
+    }
+  }
+
   useEffect(() => {
     async function fetchMovie() {
       const response = await api.get(`/notes/${params.id}`);
@@ -101,7 +110,7 @@ export function PreviewMovie() {
 
             <Button 
                 title="Excluir Filme" 
-                /* onClick={handleNewMovie} */
+                onClick={handleRemoveMovie}
             />
 
           </Content>
