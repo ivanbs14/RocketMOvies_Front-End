@@ -1,58 +1,62 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Conteiner = styled.div`
-    width: 100%;
-    height: 100vh;
+export const Container = styled.div`
+  width: 100%;
+  height: 100vh;
 
-    display: grid;
-    grid-template-rows: 105px;
-    grid-template-areas: 
+  display: grid;
+  grid-template-rows: 116px auto;
+  grid-template-areas:
     "header"
     "content";
+  
+  > main {
+    grid-area: content;
 
-    > Header {
-        padding: 0 125px;
+    width: 100%;
+    margin: 48px auto;
+
+    padding: 0 123px;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-bottom: 38px;
+
+      h1 {
+        font-weight: 400;
+      }
     }
+  }
 `;
 
 export const Content = styled.div`
-    grid-area: content;
-    overflow-y: auto;
+  max-height: calc(100vh - 297px);
+  overflow-y: auto;
 
-    padding-left: 123px;
-    padding-right: 106px;
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-    > .btn {
-
-        > Section {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 47px;
-            margin-bottom: 13px;
-        }
-    }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUNDP_400};
+    border-radius: 8px;
+  }
 `;
 
-export const NewNote = styled(Link)`
-    width: 207px;
-    height: 56px;
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUNDP_500};
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-
-    border: 0;
-    padding: 13px 32px;
-    border-radius: 10px;
-    font-weight: 500;
-
-    display: flex;
-    align-items: center;
-
-    &:disabled {
-        opacity: 0.5;
-    }
-
-    svg {
-        margin-right: 8px;
-    }
+export const NewMovie = styled(Link)`
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUNDP_500};
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  border: none;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  
+  padding: 13.5px 32px;
+  border-radius: 8px;
 `;

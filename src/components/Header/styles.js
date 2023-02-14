@@ -1,69 +1,75 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
-export const Conteiner = styled.header`
-    grid-area: header;
+export const Container = styled.header`
+  grid-area: header;
 
-    height: 105px;
-    width: 100%;
+  height: 116px;
+  width: 100%;
 
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 0 123px;
 
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+`;
 
-    padding: 0 285px;
-    background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
+export const Brand = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    > h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-        color: ${({theme}) => theme.COLORS.BACKGROUNDP_400};
-    }
-
-    > Button {
-        position: absolute;
-        margin-left: 1340px;
-        margin-top: 70px;
-    }
-
+  > h1 {
+    font-size: 24px;
+    color: ${({ theme }) => theme.COLORS.BACKGROUNDP_500};
+  }
 `;
 
 export const Search = styled.div`
-    grid-area: search;
-    width: 630px;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+  flex-grow: 1;
 `;
 
 export const Profile = styled(Link)`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    > img {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
+  > img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+
+  > div {
+    margin-right: 9px;
+    font-size: 14px;
+    line-height: 18px;
+
+    height: 40px;
+
+    strong {
+      color: ${({ theme }) => theme.COLORS.WHITE};
     }
+  }
+`;
 
-    > div {
-        display: flex;
-        flex-direction: column;
-        margin-right: 9px;
-        line-height: 24px;
-        text-align: right;
+export const Logout = styled.button`
+  border: none;
+  background: none;
+  
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
 
-        a {
-            font-size: 14px;
-            color: ${({ theme }) => theme.COLORS.GRAY_100};
-        }
-        
-        strong {
-            font-size: 18px;
-            color: ${({ theme }) => theme.COLORS.WHITE};
-        }
-    }
+  font-size: 14px;
+  line-height: 18px;
+
+  position: absolute;
+  bottom: 38px;
+  right: 196px;
 `;
