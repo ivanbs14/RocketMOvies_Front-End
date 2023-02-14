@@ -11,8 +11,8 @@ export const Conteiner = styled.div`
     "content";
 
     > main {
-        width: 1137px;
-        margin: 0 auto;
+        width: 100%;
+        margin: 10px auto;
         overflow-y: auto;
 
         /* width */
@@ -20,25 +20,13 @@ export const Conteiner = styled.div`
         width: 8px;
         }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px #0D0C0F; 
-        border-radius: 10px;
-        }
-
         /* Handle */
         ::-webkit-scrollbar-thumb {
         background: #FF859B; 
         border-radius: 10px;
         }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-        background: #FF859B; 
-        }
     }
 
-    
     .tags {
         height: 88px;
         display: flex;
@@ -53,9 +41,10 @@ export const Conteiner = styled.div`
     `;
 
 export const Form = styled.form`
-    max-width: 1121px;
     margin: 38px auto;
     margin-left: 0;
+
+    padding: 0 123px;
 
     > header {
         align-items: center;

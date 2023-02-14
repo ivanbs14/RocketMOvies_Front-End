@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import { api } from "../../services/api";
@@ -22,6 +22,8 @@ export function NewMovie() {
     const [tags, setTags] = useState([]);
     const [newTag, setNewTag] = useState("");
 
+    const navigate = useNavigate();
+
     function handleAddTag() {
         setTags(prevState => [...prevState, newTag]);
         setNewTag("");
@@ -41,10 +43,24 @@ export function NewMovie() {
 
         alert("Nota criada com sucesso!");
     }
+
+    function handleDiscardMovie() {
+        const userConfirmation = confirm(
+          "Todas as alterações serão perdidas... Tem certeza que deseja descartar e voltar?"
+        );
+    
+        if (userConfirmation) {
+          navigate(-1);
+        }
+      }
    
     return(
         <Conteiner>
-            <Header />
+            <Header>
+                <Input 
+                    placeholder="Pesquisar pelo título"
+                />
+            </Header>
 
             <main>
                 <Form>
@@ -96,7 +112,10 @@ export function NewMovie() {
                     </Section>
 
                     <div className="btn">
-                        <Button title="Excluir filme" />
+                        <Button 
+                            title="Descartar e voltar" 
+                            onClick={handleDiscardMovie}
+                        />
 
                         <Button 
                             title="Salvar alterações" 

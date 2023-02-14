@@ -11,38 +11,36 @@ export const Conteiner = styled.div`
     "content";
 
     > main {
-        width: 1137px;
+        width: 100%;
         margin: 0 auto;
         overflow-y: auto;
-
+        
         /* scrollbar */
         /* width */
         ::-webkit-scrollbar {
         width: 8px;
         }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px #0D0C0F; 
-        border-radius: 10px;
-        }
-
+        
         /* Handle */
         ::-webkit-scrollbar-thumb {
         background: #FF859B; 
         border-radius: 10px;
         }
+    }
 
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-        background: #FF859B; 
-        }
+    button {
+        margin-top: 60px;
+
+        background-color: ${({theme}) => theme.COLORS.BACKGROUND_1000};
+        color: ${({theme}) => theme.COLORS.BACKGROUNDP_500};
     }
 `;
 
 export const Content = styled.div`
-    max-width: 1121px;
+    width: 100%;
     margin: 0 auto;
+
+    padding: 0 123px;
 
     display: flex;
     flex-direction: column;
@@ -81,6 +79,9 @@ export const Content = styled.div`
     }
 `;
 
+export const Rating = styled.div`
+    border: 1px solid red;
+`;
 
 export const Profile = styled.div`
     display: flex;

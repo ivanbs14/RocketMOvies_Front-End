@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: ${({ isBigSize }) => (isBigSize ? "center" : "start")};
+  justify-content: ${({ isBigSize }) => (isBigSize ? "left" : "start")};
   gap: 1rem;
   margin-bottom: 15px;
 
