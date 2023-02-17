@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Conteiner, Content, Profile } from "./styles";
 
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
+
 import { useAuth } from '../../hooks/auth';
 
 import { api } from "../../services/api";
