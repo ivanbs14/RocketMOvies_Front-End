@@ -2,11 +2,9 @@
 
 <p align="center">
 Desenvolvido por Ivan Barbosa.<br>
-Visite o projeto finalizado https://notemovies.netlify.app/ <br>
-
-ATENÇÃO: OS SERVIDORES SÃO GRATUITOS PORTANTO AO CLICAR, 
-AGUARDE 1 MINUTO PARA QUE O PROJETO SEJA INICIALIZADO<br>
-
+<a href="https://notemovies.netlify.app/">CLICANDO AQUI!</a> <br>
+ATENÇÃO: OS SERVIDORES SÃO GRATUITOS PORTANTO AO CLICAR, <br>
+AGUARDE 1 MINUTO, ATUALIZE A PAGINA PARA QUE O PROJETO SEJA INICIALIZADO<br>
 <P align="center">Layout UI/UX RocketSeat.</P>
 </p>
 
