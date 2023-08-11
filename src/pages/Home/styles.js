@@ -15,21 +15,34 @@ export const Container = styled.div`
     grid-area: content;
 
     width: 100%;
-    margin: 48px auto;
+    margin: 4.8rem auto;
 
-    padding: 0 123px;
+    padding: 0 12.3rem;
 
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      margin-bottom: 38px;
+      margin-bottom: 3.8rem;
 
       h1 {
         font-weight: 400;
       }
+
+      @media (max-width: 430px) {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2.4rem;
+      };
     }
+
+    @media (max-width: 430px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 14rem auto 0;
+    };
   }
 `;
 
@@ -45,6 +58,10 @@ export const Content = styled.div`
     background-color: ${({ theme }) => theme.COLORS.BACKGROUNDP_400};
     border-radius: 8px;
   }
+
+  @media (max-width: 430px) {
+      padding: 0 4rem;
+  };
 `;
 
 export const NewMovie = styled(Link)`
@@ -57,6 +74,6 @@ export const NewMovie = styled(Link)`
   justify-content: center;
   gap: 8px;
   
-  padding: 13.5px 32px;
+  padding: 1.3rem 3.2rem;
   border-radius: 8px;
 `;

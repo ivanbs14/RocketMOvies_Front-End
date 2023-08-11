@@ -5,23 +5,23 @@ export const Conteiner = styled.button`
     background-color: ${({theme}) => theme.COLORS.BACKGROUNDP_rgba};
 
     border: none;
-    border-radius: 10px;
+    border-radius: 1rem;
 
-    padding: 22px;
-    margin-bottom: 16px;
+    padding: 2.2rem;
+    margin-bottom: 1.6rem;
 
     > h3 {
         flex: 1;
         text-align: left;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 2.4rem;
         color: ${({theme}) => theme.COLORS.WHITE};
 
-        margin-bottom: 15px
+        margin-bottom: 1.5rem;
     }
 
     > .text {
-        max-height: 52px;
+        max-height: 5.2rem;
         color: ${({theme}) => theme.COLORS.GRAY_100};
         font-family: 'Roboto', sans-serif;
 
@@ -31,15 +31,13 @@ export const Conteiner = styled.button`
     }
 
     > strong {
-        font-size: 16px;
-        max-height: 52px;
-
-        
+        font-size: 1.6rem;
+        max-height: 5.2rem;
     }
 
     > footer {
         width: 100%;
         display: flex;
-        margin-top: 24px;
+        margin-top: 2.4rem;
     }
 `;

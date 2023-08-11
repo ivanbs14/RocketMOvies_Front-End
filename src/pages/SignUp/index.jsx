@@ -40,7 +40,7 @@ export function SignUp() {
             <Form>
 
                 <h1>NoteMovies</h1>
-                <p>Aplicação para acompanhar tudo que assistir.</p>
+                <p>Acompanhe tudo que assistir.</p>
 
                 <h2>Crie sua conta</h2>
 
