@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: ${({ isBigSize }) => (isBigSize ? "left" : "start")};
   gap: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 
   svg {
     font-size: ${({ isBigSize }) => (isBigSize ? "2.2rem" : "1.4rem")};

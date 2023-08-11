@@ -12,8 +12,8 @@ export const Conteiner = styled.div`
     width: ${({ isNew }) => isNew ? `180px` : "none"};
 
     margin-bottom: 8px;
-    border-radius: 10px;
-    padding-right: 16px;
+    border-radius: 1rem;
+    padding-right: 1.6rem;
 
     > button {
         border: none;
@@ -30,13 +30,13 @@ export const Conteiner = styled.div`
     }
 
     > input {
-        height: 56px;
-        width: 113px;
-        max-width: 180px;
+        height: 5.6rem;
+        width: 11.3rem;
+        max-width: 18rem;
 
         width: ${({ isNew }) => isNew ? `150px` : "none"};
 
-        padding: 12px;
+        padding: 1.2rem;
 
         color: ${({ theme }) => theme.COLORS.WHITE};
         background: transparent;

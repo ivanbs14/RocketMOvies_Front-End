@@ -7,23 +7,28 @@ export const Conteiner = styled.div`
 
     display: flex;
     align-items: stretch;
+
+    @media (max-width: 430px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const Form = styled.form`
-    padding: 0 136px;
+    padding: 0 13.6rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     > h1 {
-        font-size: 48px;
+        font-size: 4.8rem;
         color: ${({theme}) => theme.COLORS.BACKGROUNDP_500};
     }
 
     > h2 {
         font-size: 24px;
-        margin: 48px 0;
+        margin: 4.8rem 0;
     }
 
     > div {
@@ -32,7 +37,7 @@ export const Form = styled.form`
     }
 
     > p {
-        font-size: 14px;
+        font-size: 1.4rem;
         color: ${({theme}) => theme.COLORS.GRAY_100};
     }
 
@@ -46,25 +51,35 @@ export const Form = styled.form`
         align-items: center;
         
         color: ${({theme}) => theme.COLORS.BACKGROUNDP_500};
-        margin-top: 42px;
+        margin-top: 4.2rem;
         
         a {
             color: ${({theme}) => theme.COLORS.BACKGROUNDP_500};
-            font-size: 16px;
+            font-size: 1.6rem;
         }
 
         svg {
-            height: 16px;
+            height: 1.6rem;
             margin-right: 8px;
-    }
+        }
     }
 
-    
+    @media (max-width: 430px) {
+        padding: 0 5rem;
+        align-items: center;
 
+        > p {
+            font-size: 1.6rem;
+        }
+    };
 `;
 
 export const Background = styled.div`
     flex: 1;
     background: url(${BackgroundImg}) no-repeat center center;
     background-size: cover;
+
+    @media (max-width: 430px) {
+        display: none;
+    };
 `;

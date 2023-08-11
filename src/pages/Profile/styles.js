@@ -5,38 +5,41 @@ export const Conteiner = styled.div`
 
     > header {
         width: 100%;
-        height: 144px;
+        height: 14.4rem;
 
         background: ${({ theme }) => theme.COLORS.BACKGROUNDP_rgba};
         
         display: flex;
         align-items: center;
         
-        padding: 0 124px;
+        padding: 0 12.4rem;
 
         a {
             display: flex;
             align-items: center;
-
             gap: 8px;
             
-            font-size: 20px;
+            font-size: 2rem;
             color: ${({theme}) => theme.COLORS.BACKGROUNDP_500};
         }
+
+        @media (max-width: 430px) {
+            padding: 0 2rem;
+        };
     }
 
 `;
 
 export const Form = styled.form`
-    max-width: 340px;
+    max-width: 34rem;
     margin: 30px auto 0;
 
     > div:nth-child(2){
-        margin-top: 60px;
+        margin-top: 6rem;
     }
 
     > div:nth-child(4){
-        margin-top: 16px;
+        margin-top: 1.6rem;
     }
 
     > div {
@@ -46,20 +49,20 @@ export const Form = styled.form`
 
 export const Avatar = styled.div`
     position: relative;
-    margin: -124px auto 32px;
+    margin: -12.4rem auto 3.2rem;
 
-    width: 186px;
-    height: 186px;
+    width: 18.6rem;
+    height: 18.6rem;
 
     > img {
-        width: 186px;
-        height: 186px;
+        width: 18.6rem;
+        height: 18.6rem;
         border-radius: 50%;
     }
 
     > label {
-        width: 48px;
-        height: 48px;
+        width: 4.8rem;
+        height: 4.8rem;
 
         background-color: ${({ theme }) => theme.COLORS.ORANGE};
         border-radius: 50%;
@@ -80,8 +83,8 @@ export const Avatar = styled.div`
     }
 
     svg {
-        width: 20px;
-        height: 20px;
+        width: 2rem;
+        height: 2rem;
         color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     }
 `;

@@ -91,6 +91,14 @@ export function NewMovie() {
                     
                     <Section title="Marcadores">
                         <div className='tags'>
+                            <NoteItem 
+                                isNew 
+                                placeholder="Nova tag"
+                                onChange={e => setNewTag(e.target.value)}
+                                value={newTag}
+                                onClick={handleAddTag}
+                            />
+                            
                             {
                                 tags.map((tag, index) => (
                                     <NoteItem 
@@ -101,13 +109,6 @@ export function NewMovie() {
                                 ))
                             }
 
-                            <NoteItem 
-                                isNew 
-                                placeholder="Nova tag"
-                                onChange={e => setNewTag(e.target.value)}
-                                value={newTag}
-                                onClick={handleAddTag}
-                            />
                         </div>
                     </Section>
 
