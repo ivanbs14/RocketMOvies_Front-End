@@ -59,6 +59,10 @@ export const Form = styled.form`
         color: ${({theme}) => theme.COLORS.BACKGROUNDP_500};
     }
 
+    .user{
+        margin-top: 2rem;
+    }
+
     @media (max-width: 430px) {
         padding: 0 5rem;
         align-items: center;
