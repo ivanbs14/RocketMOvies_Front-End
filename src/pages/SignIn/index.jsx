@@ -76,6 +76,8 @@ export function SignIn() {
                     Criar conta
                 </Link>
 
+                <p className='user'>ATENÇÃO: teste com<br/> LOGIN: user@ SENHA: 1234</p>
+
             </Form>
                 
             <Background />
